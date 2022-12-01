@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-desaturated-blue: hsl(238, 29%, 16%);
+  --clr-red: hsl(14, 88%, 65%);
+  --clr-vd-grayish-blue: hsl(237, 12%, 33%);
+  --clr-d-grayish-blue: hsl(240, 6%, 50%);
+  --clr-grayish-blue: hsl(240, 5%, 91%);
+  --bg-violet: hsl(273, 75%, 66%);
+  --bg-blue: hsl(240, 73%, 65%);
+}
+html {
+  font-size: 12px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  color: var(--clr-desaturated-blue);
+  background-image: linear-gradient(
+    to bottom,
+    var(--bg-violet),
+    var(--bg-blue)
+  );
+}
+img {
+  max-width: 100%;
+}
+.debug {
+  outline: 1px solid red;
+}
+
+.desktop {
+  display: none;
+}
+
+main {
+  width: 88%;
+  max-width: 900px;
+  margin: auto;
+  margin-top: 15em;
+  padding: 11em 2em 5em;
+  background-color: #fff;
+  background-image: url(./assets/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  border-radius: 25px;
+  position: relative;
+  box-shadow: 0px 8px 11px -1px rgba(65, 63, 63, 0.35);
+  -webkit-box-shadow: 0px 8px 11px -1px rgba(65, 63, 63, 0.35);
+  -moz-box-shadow: 0px 8px 11px -1px rgba(65, 63, 63, 0.35);
+}
+
+main > div > .image {
+  display: block;
+  width: 230px;
+  position: absolute;
+  top: -103px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.main-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+.question_container {
+  border-bottom: 1px solid var(--clr-grayish-blue);
+  padding-block: 1.2em;
+}
+.question_container > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.question_container > div > h2 {
+  font-weight: 400;
+  font-size: 1.12rem;
+}
+
+.question_container > div > h2:hover {
+  color: var(--clr-red);
+  cursor: pointer;
+}
+
+.question_container > p {
+  display: none;
+}
+@media screen and (min-width: 417px) {
+  main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5em 0em 7em;
+    background-image: url(./assets/bg-pattern-desktop.svg);
+    background-size: 80%;
+    background-position: -390px -190px;
+  }
+  .mobile {
+    display: none !important;
+  }
+  .desktop {
+    display: block;
+  }
+
+  .image-container {
+    overflow: hidden;
+  }
+  .desktop-image {
+    display: block;
+    margin-left: -70px;
+  }
+  .box {
+    position: absolute;
+    width: 17%;
+    top: 190px;
+    left: -75px;
+  }
+
+  .article {
+    width: 50%;
+    margin-right: 7em;
+  }
+  .question_container h2 {
+    font-size: 1.6rem !important;
+  }
+}
