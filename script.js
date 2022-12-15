@@ -1,13 +1,17 @@
-const heading1 = document.querySelector('#question_heading_1')
-const heading2 = document.querySelector('#question_heading_2')
-const heading3 = document.querySelector('#question_heading_3')
-const heading4 = document.querySelector('#question_heading_4')
-const heading5 = document.querySelector('#question_heading_5')
+const questions = document.getElementsByClassName('question')
 
-const article1 = document.querySelector('#article_1')
-const article2 = document.querySelector('#article_2')
-const article3 = document.querySelector('#article_3')
-const article4 = document.querySelector('#article_4')
-const article5 = document.querySelector('#article_5')
+
+for (let i = 0; i < questions.length; i++) {
+    questions[i].addEventListener("click", function (e) {
+
+        e.srcElement.classList.toggle("active")
+        let question_answer = this.nextElementSibling
+        if (question_answer.style.display == "block") {
+            question_answer.style.display = 'none'
+        } else {
+            question_answer.style.display = "block"
+        }
+    })
+}
 
 

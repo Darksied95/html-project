@@ -72,29 +72,37 @@ main > div > .image {
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.1em;
 }
-.question_container {
-  border-bottom: 1px solid var(--clr-grayish-blue);
-  padding-block: 1.2em;
-}
-.question_container > div {
+
+.question {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.question_container > div > h2 {
-  font-weight: 400;
-  font-size: 1.12rem;
-}
 
-.question_container > div > h2:hover {
-  color: var(--clr-red);
+.question h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
   cursor: pointer;
 }
+.active {
+  font-weight: 700 !important;
+}
 
-.question_container > p {
+.question_answer {
   display: none;
+  margin-block: 1em;
+  max-width: 300px;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--clr-d-grayish-blue);
+}
+
+.divider {
+  margin-block: 1.2em;
+  border-bottom: 1px solid var(--clr-grayish-blue);
 }
 @media screen and (min-width: 417px) {
   main {
@@ -130,8 +138,5 @@ main > div > .image {
   .article {
     width: 50%;
     margin-right: 7em;
-  }
-  .question_container h2 {
-    font-size: 1.6rem !important;
   }
 }
